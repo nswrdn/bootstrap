@@ -1,0 +1,75 @@
+/*!
+ * Put customizations of the bootstrap-layout here.
+ * Use the variables_nswrdn.less to adapt bootstrap-variables.
+ * Please follow this HTML/CSS style-guide:
+ * https://github.com/mdo/code-guide
+ */
+
+
+/******************
+ * NAVIGATION
+ *****************/
+// Navbar-dropdowns: brown and hide white arrow
+.navbar .dropdown-menu {
+  background-color: #E0D2A8;
+}
+.navbar .nav > li > .dropdown-menu::before {
+  visibility:hidden;
+}
+.navbar .nav > li > .dropdown-menu::after {
+  visibility:hidden;
+}
+
+// Navbar-inverse (subnav) colors/dropdown
+.navbar-inverse .dropdown-menu li a {
+  color: white;
+}
+.navbar-inverse .dropdown-menu {
+  background-color: #00424E;
+}
+// remove the gradient from the inverted navbar */
+.navbar-inverse .navbar-inner {
+  background-image: none;
+  border-radius: 0;
+}
+
+// Subnav positioning
+.subnav {
+  z-index: 1020;
+  width: 100%;
+}
+.subnav-fixed {
+  top: @navbarHeight + 1;
+  position:fixed;
+}
+.subnav .nav {
+  margin-bottom: 0;
+}
+
+.navbar-image {
+  background-color: black;
+  border-top: 2px solid rgb(165, 165, 165);
+  height: 79px;
+}
+.navbar-image a { // logo-link to main page
+  position:absolute;
+  display:block;
+  width:350px;
+  height:65px;
+  top:40px;
+}
+
+
+/******************
+ * GENERAL
+ *****************/
+body {
+  padding-top: @navbarHeight;
+}
+// Underline links except if they are in dropdowns/navbars etc. 
+a {
+  text-decoration: underline;
+}
+.dropdown-menu a, .nav a, .navbar a, .pager a, .btn, .accordion-heading a {
+  text-decoration: none;
+}
