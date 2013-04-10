@@ -1,0 +1,33 @@
+/*!
+ * Overwrite bootstrap variables here.
+ * Directly applied CSS/LESS should go to
+ * nswrdn_custom.less.
+ */
+
+// The green of the RDN-logo is #00523b
+
+/* Adapt navbar colors including hover etc. */
+@navbarText: @gray;
+@navbarLinkColor: @grayDark;
+@navbarLinkColorHover: white;
+@navbarBackgroundHighlight: #E4D7B0;
+@navbarBackground: #E4D7B0;
+@navbarHeight: 35px;
+@navbarLinkBackgroundHover: @navbarBackgroundHighlight;
+
+/* Inverted (subnav) navigation */
+@navbarInverseBackgroundHighlight:       #00424E;
+@navbarInverseBackground:                lighten(@navbarInverseBackgroundHighlight, 10%);
+@navbarInverseText:                      @white;
+@navbarInverseLinkColor:                 @white;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarInverseSearchBackground:          @white;
+
+/* General adjustments */
+@linkColor: #505050;//white;
+@linkColorHover: lighten(@linkColor, 15%);
+@btnPrimaryBackground: @gray;
+@btnPrimaryBackgroundHighlight: darken(@btnPrimaryBackground, 20%);
+@green: #C8D1A1;
+@blue: #00424E;
+@tableBackground: #E9E9E9;
