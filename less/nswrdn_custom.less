@@ -38,12 +38,15 @@
   z-index: 1020;
   width: 100%;
 }
-.subnav-fixed {
-  top: @navbarHeight + 1;
-  position:fixed;
-}
 .subnav .nav {
   margin-bottom: 0;
+}
+// Navbar should only be fixed large screens (save space on small displays)
+@media (min-width: 980px) {
+    .subnav-fixed {
+      top: @navbarHeight + 1;
+      position:fixed;
+    }
 }
 
 .navbar-image {
@@ -66,10 +69,11 @@
 body {
   padding-top: @navbarHeight;
 }
-// Underline links except if they are in dropdowns/navbars etc. 
+// Underline links except if they are in dropdowns/navbars etc.
 a {
   text-decoration: underline;
 }
 .dropdown-menu a, .nav a, .navbar a, .pager a, .btn, .accordion-heading a {
   text-decoration: none;
 }
+
