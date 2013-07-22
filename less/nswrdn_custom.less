@@ -43,24 +43,15 @@
 }
 // Navbar should only be fixed large screens (save space on small displays)
 @media (min-width: 980px) {
-    .subnav-fixed {
-      top: @navbarHeight + 1;
-      position:fixed;
-    }
+  .subnav-fixed {
+    top: @navbarHeight + 1;
+    position:fixed;
+  }
 }
 
-.navbar-image {
-  background-color: black;
-  border-top: 2px solid rgb(165, 165, 165);
-  height: 79px;
-  text-align: center;
-}
-.navbar-image a { // logo-link to main page
-  position:absolute;
-  display:block;
-  width:350px;
-  height:65px;
-  top:40px;
+.navbar .logo {
+  float: left;
+  padding-right: 3px;
 }
 
 
