@@ -1,0 +1,100 @@
+/*!
+ * Put customizations of the bootstrap-layout here.
+ * Use the nswrdn_variables.less to adapt bootstrap-variables.
+ * Please follow this HTML/CSS style-guide:
+ * https://github.com/mdo/code-guide
+ */
+
+
+/******************
+ * NAVIGATION
+ *****************/
+// Navbar-dropdowns: brown and hide white arrow
+.navbar .dropdown-menu {
+  background-color: #E0D2A8;
+}
+.navbar .nav > li > .dropdown-menu::before {
+  visibility:hidden;
+}
+.navbar .nav > li > .dropdown-menu::after {
+  visibility:hidden;
+}
+
+// For user login link which doesnt get touched by the normal navbar selectors.
+.navbar-default a {
+  color: @navbar-default-link-color;
+  &:hover {
+    color: @navbar-default-link-hover-color;
+  }
+}
+
+
+// Navbar-inverse (subnav) colors/dropdown
+.navbar-inverse .dropdown-menu li a {
+  color: white;
+}
+.navbar-inverse .dropdown-menu {
+  background-color: #00424E;
+}
+
+// Subnav positioning
+.subnav {
+  z-index: 1020;
+  width: 100%;
+}
+.subnav .nav {
+  margin-top: 5px;
+}
+
+// shrink nav pills and enlarge navbar
+.nav-pills > li > a
+{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.subnav .container
+{
+  min-height: @navbar-height;
+}
+// Navbar should only be fixed large screens (save space on small displays)
+@media (min-width: 980px) {
+  .subnav-fixed {
+    top: @navbar-height + 1;
+    position:fixed;
+  }
+}
+
+.navbar .logo {
+  float: left;
+  padding-right: 3px;
+}
+
+
+/******************
+ * GENERAL
+ *****************/
+html, body{
+  height:100%;
+}
+.container.content{
+  min-height:80%;
+}
+body {
+  padding-top: @navbar-height+1;
+}
+// Underline links except if they are in dropdowns/navbars etc.
+a {
+  text-decoration: underline;
+}
+.dropdown-menu a, .nav a, .navbar a, .pager a, .btn, .accordion-heading a {
+  text-decoration: none;
+}
+
+.base_footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 50px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}

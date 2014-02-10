@@ -1,0 +1,64 @@
+/*!
+ * Overwrite bootstrap variables here.
+ * Directly applied CSS/LESS should go to
+ * nswrdn_custom.less.
+ */
+
+// The green of the RDN-logo is #00523b
+
+/*base colors*/
+@white : #fff;
+@black:  #000;
+
+@rdn-menu-light: #006d81;
+
+/* Adapt navbar colors including hover etc. */
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+@navbar-height:                    35px;
+
+@navbar-default-color:             @gray;
+@navbar-default-bg:                #E4D7B0;
+
+// Navbar links
+@navbar-default-link-color:                @gray-dark;
+@navbar-default-link-hover-color:          lighten(@navbar-default-link-color, 20%);
+
+// Navbar brand label
+@navbar-default-brand-hover-color:         lighten(@navbar-default-brand-color, 20%);
+
+// Inverted navbar
+// Reset inverted navbar basics
+@navbar-inverse-bg:                         #005362;
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 @white;
+@navbar-inverse-link-hover-color:           @white;
+
+//=== Shared nav styles
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         transparent;
+
+//== Tabs
+@nav-tabs-active-link-hover-bg:             @body-bg;
+
+
+//== Pills
+@nav-pills-active-link-hover-bg:            @rdn-menu-light;
+@nav-pills-active-link-hover-color:         @white;
+
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:         @gray-light;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        @rdn-menu-light;
+
+/* General adjustments */
+@link-color: @white;
+@link-hover-color: @white;
+@btn-primary-bg: @gray;
+@btn-primary-bg-hover: darken(@btn-primary-bg, 20%);
+@green: #C8D1A1;
+@blue: #00424E;
