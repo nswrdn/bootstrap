@@ -20,17 +20,21 @@
   visibility:hidden;
 }
 
+// For user login link which doesnt get touched by the normal navbar selectors.
+.navbar-default a {
+  color: @navbar-default-link-color;
+  &:hover {
+    color: @navbar-default-link-hover-color;
+  }
+}
+
+
 // Navbar-inverse (subnav) colors/dropdown
 .navbar-inverse .dropdown-menu li a {
   color: white;
 }
 .navbar-inverse .dropdown-menu {
   background-color: #00424E;
-}
-// remove the gradient from the inverted navbar */
-.navbar-inverse .navbar-inner {
-  background-image: none;
-  border-radius: 0;
 }
 
 // Subnav positioning
@@ -39,12 +43,24 @@
   width: 100%;
 }
 .subnav .nav {
-  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+// shrink nav pills and enlarge navbar
+.nav-pills > li > a
+{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.subnav .container
+{
+  min-height: @navbar-height;
 }
 // Navbar should only be fixed large screens (save space on small displays)
 @media (min-width: 980px) {
   .subnav-fixed {
-    top: @navbarHeight + 1;
+    top: @navbar-height + 1;
     position:fixed;
   }
 }
@@ -65,7 +81,7 @@ html, body{
   min-height:80%;
 }
 body {
-  padding-top: @navbarHeight;
+  padding-top: @navbar-height+1;
 }
 // Underline links except if they are in dropdowns/navbars etc.
 a {
