@@ -30,13 +30,17 @@
 
 
 // Navbar-inverse (subnav) colors/dropdown
-.navbar-inverse .dropdown-menu li a {
+.navbar-inverse li a,  {
   color: white;
 }
 .navbar-inverse .dropdown-menu {
-  background-color: #00424E;
+  background-color: @rdn-dark-green;
 }
-
+.navbar-inverse .dropdown-menu li a:hover{
+  text-decoration:none;
+  color: white;
+  background-color: @rdn-menu-light;
+}
 // Subnav positioning
 .subnav {
   z-index: 1020;
@@ -70,31 +74,99 @@
   padding-right: 3px;
 }
 
+ul.nav-tabs li a:hover, ul.nav-pills li a:hover{
+  text-decoration:none;
+}
 
+.content ul.nav-pills li a{
+border: 1px solid transparent;
+}
+
+.content ul.nav-pills li a:hover{
+  border-color:@gray-lighter;
+}
+
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover, ul.nav-tabs li.active a:focus{
+  background-color:@gray-lighter;
+}
+
+ul.pagination li a:hover{
+  text-decoration:none;
+}
+
+ul.pagination .active a, ul.pagination .active a:hover, ul.pagination .active a:focus{
+  background-color: @rdn-dark-green;
+  border-color: @rdn-dark-green;
+}
 /******************
  * GENERAL
  *****************/
 html, body{
   height:100%;
 }
-.container.content{
-  min-height:80%;
+body{
+  padding-bottom: 61px;
 }
-body {
+div.outer{
+  min-height:100%;
   padding-top: @navbar-height+1;
+  /* DONT use padding-bottom here -AJ */
 }
-// Underline links except if they are in dropdowns/navbars etc.
-a {
+div.content a, div.base_footer a{
+  color:@rdn-dark-green;
+}
+div.content a:hover{
+  color:@rdn-dark-green-hover-color;
   text-decoration: underline;
 }
+
 .dropdown-menu a, .nav a, .navbar a, .pager a, .btn, .accordion-heading a {
   text-decoration: none;
 }
 
 .base_footer {
+  /* sticky footer at bottom of page */
   text-align: center;
-  padding: 30px 0;
-  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  left:0px;
+  bottom:0px;
   border-top: 1px solid #e5e5e5;
   background-color: #f5f5f5;
+  display:block;
+  padding: 20px 0;
+}
+
+.asterisk {
+   font-weight: bold; 
+   color: #db424e; 
+}
+
+.help-icon{
+  cursor: pointer;  
+}
+/* do this to inherit styles, otherwise it will look weird on page load even if 
+ * we use jquery to addClass*/
+input, select, textarea{
+  .form-control
+}
+
+input[type='checkbox']{
+  height:auto!important;
+}
+
+.alert{
+  margin-top:10px;
+}
+
+tr.clickable-row{
+  cursor: pointer;
+}
+.nowrap{
+  white-space:nowrap;
+}
+.close_tab{
+  right:8px;
+  top:10px;
+  position:absolute;
 }
