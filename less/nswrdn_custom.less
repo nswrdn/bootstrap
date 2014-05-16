@@ -98,6 +98,18 @@ ul.pagination .active a, ul.pagination .active a:hover, ul.pagination .active a:
   background-color: @rdn-dark-green;
   border-color: @rdn-dark-green;
 }
+
+a[data-toggle=collapse]{
+  color:@gray!important;
+}
+
+a[data-toggle=collapse]:hover, a[data-toggle=collapse]:focus{
+  color:@gray-light!important;
+}
+
+a[data-toggle=collapse], a[data-toggle=collapse]:hover, a[data-toggle=collapse]:focus{
+  text-decoration:none!important;
+}
 /******************
  * GENERAL
  *****************/
@@ -153,6 +165,8 @@ input, select, textarea{
 
 input[type='checkbox']{
   height:auto!important;
+  width:auto!important;
+  
 }
 
 .alert{
@@ -170,3 +184,113 @@ tr.clickable-row{
   top:10px;
   position:absolute;
 }
+
+/* These are good to add to icons to give more clarity e.g. <i class="icon-ok-sign green-icon"></i> */
+.blue-icon{
+  color:@brand-primary;
+}
+.green-icon{
+  color:@brand-success;
+}
+.red-icon{
+  color:@brand-danger;
+}
+.orange-icon{
+  color:@brand-warning;
+}
+.large-icon{
+  font-size:20px;
+}
+
+/* Styles for the ng-grid:
+   although a lot of these are normal css, there are some less related ones down
+   the bottom, so i thought it would be best to keep them together. -AJ
+ */
+.gridStyle { 
+    height: 700px!important;
+}
+.ngPagerContainer{
+    display:inline-block;
+}
+.ngPagerControl{
+    display:inline;
+}
+.ngRowCountPicker select, 
+.ngPagerControl input, 
+.ngPagerButton, 
+.ngRowCountPicker span,
+.ngTotalSelectContainer div{
+    height:34px!important;
+    display:inline;
+}
+.ngRowCountPicker span{
+    margin-top:0px!important;
+    margin-right:5px;
+    line-height:34px;
+}
+.ngTotalSelectContainer {
+    margin-top:10px!important;
+}
+.ngFooterTotalItems span{
+    line-height:34px;
+}
+.ngRow.selected{
+    /* DIFF COLOUR? */
+}
+
+    /* want them to be smaller than the container div */
+.ngTopPanel, 
+.ngGroupPanel,  
+.ngViewport,
+.ngCanvas,
+.ngHeaderContainer,
+.ngRow,
+.ngFooterPanel,
+.gridStyle{  
+  @media (min-width: @screen-sm-min){
+      width: @ng-grid-sm!important;
+  }
+  @media (min-width: @screen-md-min){
+      width: @ng-grid-md!important;
+  }
+  @media (min-width: @screen-lg-min){
+      width: @ng-grid-lg!important;
+  }
+}
+
+.ngRow{
+  border:none!important;
+}
+.ngCell input,
+.ngCell select{
+  border: 0px;
+  border-radius: 0px;
+}
+.close_button_col{
+  background-color: #fdfdfd!important;
+}
+
+/* dont need this right now (or ever)
+.ngViewport{
+  overflow-x:visible!important;
+}
+.gridStyle{
+  overflow-x:visible
+}
+
+.grid_row_controls{
+  @media (min-width: @screen-sm-min){
+      left: @ng-grid-sm!important;
+  }
+  @media (min-width: @screen-md-min){
+      left: @ng-grid-md!important;
+  }
+  @media (min-width: @screen-lg-min){
+      left: @ng-grid-lg!important;
+  }
+    width:150px;
+    height:34px;
+    position:absolute;
+}*/
+
+/* end ng-grid styles */
