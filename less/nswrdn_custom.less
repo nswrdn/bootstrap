@@ -245,6 +245,7 @@ tr.clickable-row{
 .ngCanvas,
 .ngHeaderContainer,
 .ngRow,
+.ngCustomRow,
 .ngFooterPanel,
 .gridStyle{  
   @media (min-width: @screen-sm-min){
@@ -258,14 +259,72 @@ tr.clickable-row{
   }
 }
 
+.ngViewport{
+  overflow-x: hidden!important;
+}
+
 .ngRow{
   border:none!important;
 }
+
+.ngCustomRow{
+  background-color: inherit!important;
+}
+
 .ngCell input,
 .ngCell select{
   border: 0px;
   border-radius: 0px;
 }
+
+.ngRowDirty{
+  background-color: lighten(@brand-warning, 25%)!important;
+}
+
+/* background color animation */
+.ngRowSaved{
+  background-color: lighten(@brand-success, 25%)!important;
+}
+
+.ngRowSaved-add,.ngRowSaved-remove {
+  background-color: inherit!important;
+  transition: all 1500ms;
+  -webkit-transition: all 1500ms ease-in-out;
+}
+.ngRowSaved-add-active {
+  background-color: lighten(@brand-success, 25%)!important;
+}
+.ngRowSaved-remove {
+  background-color: lighten(@brand-success, 25%)!important;
+}
+.ngRowSaved-remove-active {
+  background-color: inherit!important;
+}
+  /*errors*/
+.ngRowError{
+  background-color: lighten(@brand-danger, 25%)!important;
+}
+
+.ngRowError-add{/*.ngRowError-remove {*/
+  background-color: inherit!important;
+  transition: all 1500ms;
+  -webkit-transition: all 1500ms ease-in-out;
+}
+.ngRowError-add-active {
+  background-color: lighten(@brand-danger, 25%)!important;
+}
+.ngRowError-remove {
+  background-color: lighten(@brand-danger, 25%)!important;
+  transition: all 400ms;
+  -webkit-transition: all 400ms ease-in-out;
+}
+.ngRowError-remove-active {
+  background-color: inherit!important;
+}
+
+/* end bg color animation */
+
+
 .close_button_col{
   background-color: #fdfdfd!important;
 }
